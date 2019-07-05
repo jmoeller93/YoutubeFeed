@@ -139,9 +139,10 @@ window.onYouTubeIframeAPIReady = function() {
   });
 
   //When the user clicks an element with a playlist index...
-  window
-    .jQuery(document)
-    .on("click", '[data-ypt-index]:not(".ypt-now-playing")', function(e) {
+  jQuery(document).on(
+    "click",
+    '[data-ypt-index]:not(".ypt-now-playing")',
+    function(e) {
       //click on a thumb that is not currently playing
       ypt_index = Number(jQuery(this).attr("data-ypt-index")); //Get the ypt_index of the clicked item
       if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
@@ -160,5 +161,6 @@ window.onYouTubeIframeAPIReady = function() {
       }
       jQuery(nowPlayingClass).removeClass(nowPlaying); //Remove "now playing" from the thumb that is no longer playing
       //When the new video starts playing, its thumb will get the now playing class
-    }); //jQuery(document).on('click','#ypt_thumbs...
+    }
+  ); //jQuery(document).on('click','#ypt_thumbs...
 };
