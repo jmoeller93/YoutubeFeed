@@ -1,0 +1,102 @@
+html {
+  background: #fff;
+  padding-top: 30px;
+}
+
+body {
+  width: 940px;
+  margin: 0 auto;
+}
+
+#ypt_wrapper {
+  width: 100%;
+  background: #fff;
+  //color: #000;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1em;
+}
+
+#ypt_thumbs {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 20%;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+#ypt_thumbs li {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  font-size: 0;
+}
+
+#ypt_thumbs li img {
+  width: 100%;
+}
+
+#ypt_thumbs li p {
+  font-family: arial;
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 5%;
+  margin: 0;
+}
+
+#ypt_thumbs li:hover p {
+  display: block;
+  cursor: pointer;
+}
+
+#ypt_thumbs .ypt-now-playing p {
+  display: block;
+}
+
+#ypt_thumbs .ypt-now-playing > span::after {
+  content: "\25b6  Now playing"; /* A traingle pointing right */
+  margin-top: -1em;
+  display: block;
+  width: 100%;
+  padding: 5%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+}
+
+#ypt_wrapper .video {
+  position: relative;
+  width: 80%;
+  /*height: 0;*/
+  padding-bottom: 48.4%;
+  float: left;
+}
+
+#ypt_wrapper .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+@media only screen and (max-width: 400px) {
+  #ypt_thumbs {
+    display: none;
+  }
+  #ypt_wrapper .video {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+}
