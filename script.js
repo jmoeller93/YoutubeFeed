@@ -5,12 +5,75 @@ var firstScriptTag = document.getElementsByTagName("script")[0]; //Find the firs
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); //Put this script tag before the first one
 
 var player; //The Youtube API player
+
+//Teststuff
+var youTubeUserName = "RaiffeisenKassel";
+var localChannelId = "UCQepnZmhCT9Boc2jbv7ehug";
+var showPlayListButton = document.querySelector("#showPlayList");
+//Teststuff
+
 var ypt_player = document.getElementById("player");
 var playlistID = ypt_player.getAttribute("data-pl");
 var ypt_thumbs = document.getElementById("ypt_thumbs");
 var nowPlaying = "ypt-now-playing"; //For marking the current thumb
 var nowPlayingClass = "." + nowPlaying;
 var ypt_index = 0; //Playlists begin at the first video by default
+
+//Test
+
+
+
+  $(document).ready(function() {
+    document.getElementById("div2").innerHTML = // lots of ways to make this happen
+      "<h1>YouTube Channel: <a href='http://www.youtube.com/channel/" + // but for this demo, construct and
+      localChannelId +
+      "' target = '_newtab'>" + // load the HTML to display and
+      youTubeUserName +
+      "</a></h1>"; // link a header with the channel's name
+
+    $.get(
+      "https://www.googleapis.com/youtube/v3/playlists",
+      {
+        // API call to "playlists" resource with
+        part: "snippet, id", // hard-coded channel ID in hand
+        channelId: localChannelId,
+        key: localStorage.getItem("storedApiKey")
+      },
+      function(data) {
+        // callback cycles through playlist and for
+        $.each(data.items, function(i, item) {
+          // each playlist item, calls the getVids subroutine
+          getVids(item.snippet.title, item.id); // to display the playlist name and its contents
+        }); // end $.each
+      } // end function(data) callback from /playlists resource API call
+    ); // end API call to /playlists resource
+  }); // end (document).ready / function
+
+  function getVids(playListTitle, playListID) {
+    $.get(
+      "https://www.googleapis.com/youtube/v3/playlistItems",
+      {
+        part: "snippet",
+        maxResults: 20,
+        playlistId: playListID,
+        key: localStorage.getItem("storedApiKey")
+      },
+      function(data) {
+        var output;
+        $("#playListContainer").append(
+          "<strong>Playlist: <a href='http://www.youtube.com/playlist/?=" +
+            playListID +
+            "' target = '_newtab'>" +
+            playListTitle +
+            "</a></strong><ul>"
+        ); // paint title of playlist on web page
+        $("#playListContainer").append("</ul><br />"); // finish painting of HTML unstructured list
+      } // end callback function from /playlistItems resource API call
+    ); // end API call to /playlistItems resource
+  } // end getVids function
+}); // end of ge
+
+//Test
 
 function getPlaylistData(playlistID, video_list, page_token) {
   //Makes a single request to Youtube Data API
@@ -96,7 +159,10 @@ window.onYouTubeIframeAPIReady = function() {
     width: "640",
     playerVars: {
       listType: "playlist",
-      list: playlistID
+      list: playlistID,
+      rel: 0,
+      showinfo: 0,
+      ecver: 2
     },
     events: {
       onReady: onPlayerReady,

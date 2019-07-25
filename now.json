@@ -1,4 +1,7 @@
 {
   "name": "<YoutubeFeed>",
-  "version": 2
+  "version": 2,
+  "github": {
+    "autoAlias": false
+  }
 }
