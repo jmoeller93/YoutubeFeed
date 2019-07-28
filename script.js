@@ -1,6 +1,6 @@
 const apiKey = 'AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8';
 const channelId = 'UCQepnZmhCT9Boc2jbv7ehug';
-const playlistId = 'PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv';
+const defaultPlaylistId = 'PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv';
 const youTubeUserName = 'RaiffeisenKassel';
 
 const initializeYoutube = () => {
@@ -14,18 +14,26 @@ const initializeYoutube = () => {
 var ypt_player = document.getElementById('player');
 var ypt_thumbs = document.getElementById('playlistContainer');
 
-//Once the Youtube Iframe API is ready...
+let player = null;
+const playOnPlayer = (playlistId, index) =>
+  player &&
+  player.cuePlaylist({
+    listType: 'playlist',
+    list: playlistId,
+    index,
+    suggestedQuality: 'hd720'
+  });
 window.onYouTubeIframeAPIReady = function() {
   var nowPlaying = 'ypt-now-playing'; //For marking the current thumb
   var nowPlayingClass = '.' + nowPlaying;
   var ypt_index = 0; //Playlists begin at the first video by default
 
-  const player = new YT.Player('player', {
+  player = new YT.Player('player', {
     height: '360',
     width: '640',
     playerVars: {
       listType: 'playlist',
-      list: playlistId,
+      list: defaultPlaylistId,
       rel: 0,
       showinfo: 0,
       ecver: 2
@@ -35,20 +43,6 @@ window.onYouTubeIframeAPIReady = function() {
       onStateChange: onPlayerStateChange
     }
   });
-
-  // const playlistContainer = document.getElementById('playlistContainer'); //Parent
-  // playlistContainer.addEventListener('click', e => {
-  //   let target = e.target; //Clicked element
-  //   while (target && target.parentNode !== ul) {
-  //     target = target.parentNode; //If the clicked element isn't a direct child
-  //     if (!target) {
-  //       console.log('hi');
-  //     } //If element doesn't exist
-  //   }
-  //   if (target.tagName === 'LI') {
-  //     console.log('ho');
-  //   }
-  // });
 
   // When the player does something...
   function onPlayerStateChange(event) {
@@ -126,6 +120,10 @@ const renderPlaylists = playlists => {
   const playlistsTemplate = $('#playlists').html();
   const rendered = Mustache.render(playlistsTemplate, { playlists });
   $('#playlistsContainer').html(rendered);
+  $('.youtube-playlist').click(e => {
+    const playlistId = e.currentTarget.dataset.youtubePlaylistId;
+    getPlaylistVideos(playlistId).then(renderVideoList);
+  });
 };
 
 const getPlaylists = channelId => {
@@ -133,13 +131,19 @@ const getPlaylists = channelId => {
 
   return fetch(url)
     .then(response => response.json())
-    .then(json => json.items.map((item, index) => ({ ...item, index })));
+    .then(json => json.items);
 };
 
-const renderPlaylist = videos => {
+const renderVideoList = videos => {
   const playlistTemplate = $('#playlist').html();
   const rendered = Mustache.render(playlistTemplate, { videos });
   $('#playlistContainer').html(rendered);
+
+  $('.youtube-video').click(e => {
+    const videoIndex = e.currentTarget.dataset.youtubeVideoIndex;
+    const playlistId = e.currentTarget.dataset.youtubePlaylistId;
+    playOnPlayer(playlistId, videoIndex);
+  });
 };
 
 const getPlaylistVideos = playlistId => {
@@ -147,13 +151,20 @@ const getPlaylistVideos = playlistId => {
 
   return fetch(url)
     .then(response => response.json())
-    .then(json => json.items.map((item, index) => ({ ...item, index })));
+    .then(
+      json => json.items.filter(item => item.snippet.thumbnails) // entferne alle items ohne thumbnail
+    );
 };
 
 const main = () => {
   initializeYoutube();
-  getPlaylists(channelId).then(renderPlaylists);
-  getPlaylistVideos(playlistId).then(renderPlaylist);
+
+  getPlaylists(channelId).then(playlists => {
+    renderPlaylists(playlists);
+
+    const playlistId = playlists[0].id;
+    getPlaylistVideos(playlistId).then(renderVideoList);
+  });
 };
 
 main();
