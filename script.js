@@ -15,7 +15,8 @@ var ypt_player = document.getElementById('player');
 var ypt_thumbs = document.getElementById('playlistContainer');
 
 let player = null;
-const playOnPlayer = (playlistId, index) =>
+
+const cueOnPlayer = (playlistId, index) =>
   player &&
   player.cuePlaylist({
     listType: 'playlist',
@@ -23,6 +24,9 @@ const playOnPlayer = (playlistId, index) =>
     index,
     suggestedQuality: 'hd720'
   });
+
+const playOnPlayer = index => player && player.playVideoAt(index);
+
 window.onYouTubeIframeAPIReady = function() {
   var nowPlaying = 'ypt-now-playing'; //For marking the current thumb
   var nowPlayingClass = '.' + nowPlaying;
@@ -120,9 +124,11 @@ const renderPlaylists = playlists => {
   const playlistsTemplate = $('#playlists').html();
   const rendered = Mustache.render(playlistsTemplate, { playlists });
   $('#playlistsContainer').html(rendered);
+
   $('.youtube-playlist').click(e => {
     const playlistId = e.currentTarget.dataset.youtubePlaylistId;
     getPlaylistVideos(playlistId).then(renderVideoList);
+    cueOnPlayer(playlistId, 0);
   });
 };
 
@@ -141,8 +147,7 @@ const renderVideoList = videos => {
 
   $('.youtube-video').click(e => {
     const videoIndex = e.currentTarget.dataset.youtubeVideoIndex;
-    const playlistId = e.currentTarget.dataset.youtubePlaylistId;
-    playOnPlayer(playlistId, videoIndex);
+    playOnPlayer(videoIndex);
   });
 };
 
