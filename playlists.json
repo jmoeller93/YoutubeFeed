@@ -1,0 +1,311 @@
+{
+ "kind": "youtube#playlistListResponse",
+ "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/lied0-Bh2aCgQVtLj9BHVPQ0wPg\"",
+ "pageInfo": {
+  "totalResults": 7,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/QMQKaGgl72nG_dXEHK3s-0UBQyU\"",
+   "id": "PLQ7uuVY6M9ieqY_NE_Sk-n-uQe0PRkFKW",
+   "snippet": {
+    "publishedAt": "2018-08-14T07:13:30.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "IDEAL Tour 2018",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/OaNou-pa3J4/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/OaNou-pa3J4/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/OaNou-pa3J4/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/OaNou-pa3J4/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/OaNou-pa3J4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "IDEAL Tour 2018",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/J2JYb17Sne36Dv1H0_aZ9RMiTrA\"",
+   "id": "PLQ7uuVY6M9ifDRDC7pTci6o-fHmWLDnDl",
+   "snippet": {
+    "publishedAt": "2017-10-20T08:56:28.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Ausbildung bei der Raiffeisen Waren GmbH",
+    "description": "Starten Sie jetzt Ihre Karriere\n► Unser Ausbildungsangebot: http://www.raiffeisen-kassel.de/ausbildung\n\nNeue Wege finden und gemeinsam wachsen. Herausforderungen annehmen. Ideen einbringen. Potenzial erkennen. Perspektiven schaffen. Ein guter Start mit besten Zukunftschancen. Berufe mit Zukunftsperspektive. Spaß an der Arbeit im Team. Zusammenarbeit und Transparenz. Eigener Antrieb. Gemeinsamer Erfolg.\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/lD6WKF7yzkw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/lD6WKF7yzkw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/lD6WKF7yzkw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/lD6WKF7yzkw/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/lD6WKF7yzkw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "Ausbildung bei der Raiffeisen Waren GmbH",
+     "description": "Starten Sie jetzt Ihre Karriere\n► Unser Ausbildungsangebot: http://www.raiffeisen-kassel.de/ausbildung\n\nNeue Wege finden und gemeinsam wachsen. Herausforderungen annehmen. Ideen einbringen. Potenzial erkennen. Perspektiven schaffen. Ein guter Start mit besten Zukunftschancen. Berufe mit Zukunftsperspektive. Spaß an der Arbeit im Team. Zusammenarbeit und Transparenz. Eigener Antrieb. Gemeinsamer Erfolg.\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/SmaWGINMp3D8X2Bn2bYm649UIkA\"",
+   "id": "PLQ7uuVY6M9icn8d81SR5d1c0f-QdlgpYq",
+   "snippet": {
+    "publishedAt": "2017-09-27T07:46:17.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Baustoffshop",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/f3ZE7oXJs08/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/f3ZE7oXJs08/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/f3ZE7oXJs08/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/f3ZE7oXJs08/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/f3ZE7oXJs08/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "Raiffeisen Baustoffshop",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/MuvkvUM_XPNXuldvDSP8ImF5g2w\"",
+   "id": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:08:45.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen-Serviceportal",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "Raiffeisen-Serviceportal",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/4RCd1j6sYNy08u-2EJsnc5pFM0g\"",
+   "id": "PLQ7uuVY6M9if3HkWvYU27zL2gIht7gEcX",
+   "snippet": {
+    "publishedAt": "2015-10-29T12:13:54.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Baustoffe",
+    "description": "Ein Rundgang durch die Baustoff-Niederlassung in Kassel Bettenhausen. Auf über 20.000 Quadratmetern bietet die Raiffeisen Waren GmbH ein umfangreiches Sortiment rund um das Bauen und Modernisieren. Hochwertige Artikel warten auf Hobby-Handwerker und Profis. Werte schaffen. Gemeinsam handeln.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/A3NfMIr9zUM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/A3NfMIr9zUM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/A3NfMIr9zUM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/A3NfMIr9zUM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/A3NfMIr9zUM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "Raiffeisen Baustoffe",
+     "description": "Ein Rundgang durch die Baustoff-Niederlassung in Kassel Bettenhausen. Auf über 20.000 Quadratmetern bietet die Raiffeisen Waren GmbH ein umfangreiches Sortiment rund um das Bauen und Modernisieren. Hochwertige Artikel warten auf Hobby-Handwerker und Profis. Werte schaffen. Gemeinsam handeln."
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/5w-IAFZ9EbRfYo8Cr1SpCZvtdIQ\"",
+   "id": "PLQ7uuVY6M9idp5AH6SB1soPa4xSrPo2Vu",
+   "snippet": {
+    "publishedAt": "2015-10-14T06:58:15.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "FENDT Feldabend Mosheim 2015",
+    "description": "In Mosheim hat unter dem Motto „Seit 66 Jahren unser bestes Pferd“ am 10. September der große FENDT-Feldabend stattgefunden. „Wir feiern dieses Jahr die 66-jährige Partnerschaft mit unserem „Zugpferd“ FENDT“, freute sich Mario Soose, Spartenleiter Technik bei der Raiffeisen Waren GmbH. Mit weit mehr als 3500 Besuchern hat sich die Veranstaltung erneut als eine der landesweit größten ihrer Art präsentiert. \n[...]\nHier geht's zur Pressemitteilung:\nhttp://www.raiwa.net/service-beratung/landtechnik/feldabend-mosheim/\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/DNKGyzC2ggo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/DNKGyzC2ggo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/DNKGyzC2ggo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/DNKGyzC2ggo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/DNKGyzC2ggo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "FENDT Feldabend Mosheim 2015",
+     "description": "In Mosheim hat unter dem Motto „Seit 66 Jahren unser bestes Pferd“ am 10. September der große FENDT-Feldabend stattgefunden. „Wir feiern dieses Jahr die 66-jährige Partnerschaft mit unserem „Zugpferd“ FENDT“, freute sich Mario Soose, Spartenleiter Technik bei der Raiffeisen Waren GmbH. Mit weit mehr als 3500 Besuchern hat sich die Veranstaltung erneut als eine der landesweit größten ihrer Art präsentiert. \n[...]\nHier geht's zur Pressemitteilung:\nhttp://www.raiwa.net/service-beratung/landtechnik/feldabend-mosheim/\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/P7bCJR_rui8RvLXKSatOH-znC_Q\"",
+   "id": "PLQ7uuVY6M9if0JJQ_e8Rh5sPV9UAPZeys",
+   "snippet": {
+    "publishedAt": "2015-04-29T12:46:58.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen EXPERTENWISSEN",
+    "description": "Mit der Video-Serie \"Raiffeisen EXPERTENWISSEN\" möchten wir unsere Kunden über aktuelle Themen informieren und mit Rat und Tat bei Problemstellungen oder Herausforderungen zur Seite stehen. „Das ist es, was unsere Kunden an uns schätzen“, so Reinhard Stieglitz, Geschäftsführer der Raiffeisen Waren GmbH.\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/C20f7oZvk6w/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/C20f7oZvk6w/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/C20f7oZvk6w/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/C20f7oZvk6w/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/C20f7oZvk6w/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "localized": {
+     "title": "Raiffeisen EXPERTENWISSEN",
+     "description": "Mit der Video-Serie \"Raiffeisen EXPERTENWISSEN\" möchten wir unsere Kunden über aktuelle Themen informieren und mit Rat und Tat bei Problemstellungen oder Herausforderungen zur Seite stehen. „Das ist es, was unsere Kunden an uns schätzen“, so Reinhard Stieglitz, Geschäftsführer der Raiffeisen Waren GmbH.\n\n► Folgen Sie uns auf Facebook: https://facebook.com/raiffeisen.waren\n► Erfahren Sie mehr über uns: http://www.raiwa.net"
+    }
+   }
+  }
+ ]
+}

@@ -1,172 +1,43 @@
-// Load Youtube IFrame Player API code asynchronously. This boat is going nowhere without it.
-var tag = document.createElement("script"); //Add a script tag
-tag.src = "https://www.youtube.com/iframe_api"; //Set the SRC to get the API
-var firstScriptTag = document.getElementsByTagName("script")[0]; //Find the first script tag in the html
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); //Put this script tag before the first one
+const apiKey = 'AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8';
+const channelId = 'UCQepnZmhCT9Boc2jbv7ehug';
+const defaultPlaylistId = 'PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv';
+const youTubeUserName = 'RaiffeisenKassel';
 
-var player; //The Youtube API player
+const initializeYoutube = () => {
+  // Load Youtube IFrame Player API code asynchronously. This boat is going nowhere without it.
+  var tag = document.createElement('script'); //Add a script tag
+  tag.src = 'https://www.youtube.com/iframe_api'; //Set the SRC to get the API
+  var firstScriptTag = document.getElementsByTagName('script')[0]; //Find the first script tag in the html
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); //Put this script tag before the first one
+};
 
-//Teststuff
-var youTubeUserName = "RaiffeisenKassel";
-var localChannelId = "UCQepnZmhCT9Boc2jbv7ehug";
-var showPlayListButton = document.querySelector("#showPlayList");
-var getAPIKeybutton = document.querySelector("#getAPIKey");
-//Teststuff
+var ypt_player = document.getElementById('player');
+var ypt_thumbs = document.getElementById('playlistContainer');
 
-var ypt_player = document.getElementById("player");
-var playlistID = ypt_player.getAttribute("data-pl");
-var channelID = ypt_player.getAttribute("data-ch");
-var ypt_thumbs = document.getElementById("ypt_thumbs");
-var nowPlaying = "ypt-now-playing"; //For marking the current thumb
-var nowPlayingClass = "." + nowPlaying;
-var ypt_index = 0; //Playlists begin at the first video by default
+let player = null;
 
-// Test;
+const cueOnPlayer = (playlistId, index) =>
+  player &&
+  player.cuePlaylist({
+    listType: 'playlist',
+    list: playlistId,
+    index,
+    suggestedQuality: 'hd720'
+  });
 
-function getPlaylists(channelID, playLists) {
-  var apiKey = "AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8";
-  var theUrl =
-    "https://www.googleapis.com/youtube/v3/playlists?part=snippet" +
-    "&maxResults=" +
-    50 + //Can be anything from 1-50
-    "&channelId=" +
-    localChannelId +
-    "&key=" +
-    apiKey;
-  var xmlHttp = null;
-  xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", theUrl, true);
-  xmlHttp.send(null);
-  xmlHttp.onload = function(e) {
-    //when the request comes back
-    buildPlaylistJSON(xmlHttp.responseText, playLists, channelID); //send the data to buildJSON
-  };
-}
+const playOnPlayer = index => player && player.playVideoAt(index);
 
-function buildPlaylistJSON(response, list, channelID) {
-  //Takes the text response and adds it to any existing JSON data
-  var results = JSON.parse(response); //Parse it
-  if (!list) {
-    list = [];
-  } //If there is no list to add to, make one
-  list.push.apply(list, results.items); //Add JSON data to the list
-  //If there is not a next-page token
-  buildPlaylistHTML(list); //Send the JSON data to buildHTML
-}
-
-function buildPlaylistHTML(data) {
-  //Turns JSON data into HTML elements
-  var list_data = ""; //A string container
-  for (i = 0; i < data.length; i++) {
-    //Do this to each item in the JSON list
-    var item = data[i].snippet; //Each Youtube playlist item snippet
-    if (!item.thumbnails) {
-      continue;
-    } //private videos do no reveal thumbs, so skip them
-    list_data +=
-      '<li data-ypt-channel="' +
-      i +
-      '"><span><img alt="' +
-      item.title +
-      '" src="' +
-      item.thumbnails.medium.url +
-      '"' +
-      'style="width: 200px; height: 11"/></span>' +
-      "<h3>" +
-      item.title +
-      "</h3></li>"; //create an element and add it to the list
-  }
-  playListContainer.innerHTML = list_data; //After the for loop, insert that list of links into the html
-}
-
-//Test
-
-function getPlaylistData(playlistID, video_list, page_token) {
-  //Makes a single request to Youtube Data API
-  var apiKey = "AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8";
-  var theUrl =
-    "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet" +
-    "&maxResults=" +
-    50 + //Can be anything from 1-50
-    "&playlistId=" +
-    playlistID +
-    "&key=" +
-    apiKey;
-  if (page_token) {
-    theUrl += "&pageToken=" + page_token;
-  } //If there is page token, start there
-  var xmlHttp = null;
-  xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", theUrl, true);
-  xmlHttp.send(null);
-  xmlHttp.onload = function(e) {
-    //when the request comes back
-    buildPlaylistDataJSON(xmlHttp.responseText, video_list, playlistID); //send the data to buildJSON
-  };
-}
-
-function buildPlaylistDataJSON(response, list, playlistID) {
-  //Takes the text response and adds it to any existing JSON data
-  var results = JSON.parse(response); //Parse it
-  if (!list) {
-    list = [];
-  } //If there is no list to add to, make one
-  list.push.apply(list, results.items); //Add JSON data to the list
-  if (results.nextPageToken) {
-    //If the results included a page token
-    getPlaylistData(playlistID, list, results.nextPageToken); //Create another data API request including the current list and page token
-  } else {
-    //If there is not a next-page token
-    buildPlaylistDataHTML(list); //Send the JSON data to buildHTML
-  }
-}
-
-function buildPlaylistDataHTML(data) {
-  //Turns JSON data into HTML elements
-  var list_data = ""; //A string container
-  for (i = 0; i < data.length; i++) {
-    //Do this to each item in the JSON list
-    var item = data[i].snippet; //Each Youtube playlist item snippet
-    if (!item.thumbnails) {
-      continue;
-    } //private videos do no reveal thumbs, so skip them
-    list_data +=
-      '<li data-ypt-index="' +
-      i +
-      '"><p>' +
-      item.title +
-      '</p><span><img alt="' +
-      item.title +
-      '" src="' +
-      item.thumbnails.medium.url +
-      '"/></span></li>'; //create an element and add it to the list
-  }
-  ypt_thumbs.innerHTML = list_data; //After the for loop, insert that list of links into the html
-}
-
-function yptThumbHeight() {
-  ypt_thumbs.style.height =
-    document.getElementById("player").clientHeight + "px"; //change the height of the thumb list
-  //breaks if ypt_player.clientHeight + 'px';
-}
-
-function onPlayerReady(event) {
-  //Once the player is ready...
-  yptThumbHeight(); //Set the thumb containter height
-}
-
-getPlaylistData(playlistID);
-getPlaylists(getPlaylists);
-
-//Once the Youtube Iframe API is ready...
 window.onYouTubeIframeAPIReady = function() {
-  // Creates an <iframe> (and YouTube player) after the API code downloads. must be globally available
-  player = new YT.Player("player", {
-    height: "360",
-    width: "640",
+  var nowPlaying = 'ypt-now-playing'; //For marking the current thumb
+  var nowPlayingClass = '.' + nowPlaying;
+  var ypt_index = 0; //Playlists begin at the first video by default
+
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
     playerVars: {
-      listType: "playlist",
-      list: playlistID,
+      listType: 'playlist',
+      list: defaultPlaylistId,
       rel: 0,
       showinfo: 0,
       ecver: 2
@@ -177,26 +48,11 @@ window.onYouTubeIframeAPIReady = function() {
     }
   });
 
-  var ul = document.getElementById("playListContainer"); //Parent
-
-  ul.addEventListener("click", function(e) {
-    var target = e.target; //Clicked element
-    while (target && target.parentNode !== ul) {
-      target = target.parentNode; //If the clicked element isn't a direct child
-      if (!target) {
-        console.log("hi");
-      } //If element doesn't exist
-    }
-    if (target.tagName === "LI") {
-      console.log("ho");
-    }
-  });
-
   // When the player does something...
   function onPlayerStateChange(event) {
     //Let's check on what video is playing
     var currentIndex = player.getPlaylistIndex();
-    var the_thumbs = ypt_thumbs.getElementsByTagName("li");
+    var the_thumbs = ypt_thumbs.getElementsByTagName('li');
     var currentThumb = the_thumbs[currentIndex];
 
     if (event.data == YT.PlayerState.PLAYING) {
@@ -204,7 +60,7 @@ window.onYouTubeIframeAPIReady = function() {
 
       for (var i = 0; i < the_thumbs.length; i++) {
         //Loop through the thumbs
-        the_thumbs[i].className = ""; //Remove nowplaying from each thumb
+        the_thumbs[i].className = ''; //Remove nowplaying from each thumb
       }
 
       currentThumb.className = nowPlaying; //this will also erase any other class belonging to the li
@@ -217,30 +73,30 @@ window.onYouTubeIframeAPIReady = function() {
       currentIndex == the_thumbs.length - 1 &&
       the_thumbs[currentIndex].className == nowPlaying
     ) {
-      jQuery.event.trigger("playlistEnd"); //Trigger a global event
+      jQuery.event.trigger('playlistEnd'); //Trigger a global event
     }
   } //function onPlayerStateChange(event)
 
   //When the user changes the window size...
-  window.addEventListener("resize", function(event) {
+  window.addEventListener('resize', function(event) {
     yptThumbHeight(); //change the height of the thumblist
   });
 
   //When the user clicks an element with a playlist index...
   jQuery(document).on(
-    "click",
+    'click',
     '[data-ypt-index]:not(".ypt-now-playing")',
     function(e) {
       //click on a thumb that is not currently playing
-      ypt_index = Number(jQuery(this).attr("data-ypt-index")); //Get the ypt_index of the clicked item
+      ypt_index = Number(jQuery(this).attr('data-ypt-index')); //Get the ypt_index of the clicked item
       if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
         //if IOS
         player.cuePlaylist({
           //cue is required for IOS 7
-          listType: "playlist",
+          listType: 'playlist',
           list: playlistID,
           index: ypt_index,
-          suggestedQuality: "hd720" //quality is required for cue to work, for now
+          suggestedQuality: 'hd720' //quality is required for cue to work, for now
           // https://code.google.com/p/gdata-issues/issues/detail?id=5411
         }); //player.cuePlaylist
       } else {
@@ -252,3 +108,68 @@ window.onYouTubeIframeAPIReady = function() {
     }
   ); //jQuery(document).on('click','#ypt_thumbs...
 };
+
+const yptThumbHeight = () => {
+  ypt_thumbs.style.height =
+    document.getElementById('player').clientHeight + 'px'; //change the height of the thumb list
+  //breaks if ypt_player.clientHeight + 'px';
+};
+
+const onPlayerReady = event => {
+  //Once the player is ready...
+  yptThumbHeight(); //Set the thumb containter height
+};
+
+const renderPlaylists = playlists => {
+  const playlistsTemplate = $('#playlists').html();
+  const rendered = Mustache.render(playlistsTemplate, { playlists });
+  $('#playlistsContainer').html(rendered);
+
+  $('.youtube-playlist').click(e => {
+    const playlistId = e.currentTarget.dataset.youtubePlaylistId;
+    getPlaylistVideos(playlistId).then(renderVideoList);
+    cueOnPlayer(playlistId, 0);
+  });
+};
+
+const getPlaylists = channelId => {
+  const url = `https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=${channelId}&key=${apiKey}`;
+
+  return fetch(url)
+    .then(response => response.json())
+    .then(json => json.items);
+};
+
+const renderVideoList = videos => {
+  const playlistTemplate = $('#playlist').html();
+  const rendered = Mustache.render(playlistTemplate, { videos });
+  $('#playlistContainer').html(rendered);
+
+  $('.youtube-video').click(e => {
+    const videoIndex = e.currentTarget.dataset.youtubeVideoIndex;
+    playOnPlayer(videoIndex);
+  });
+};
+
+const getPlaylistVideos = playlistId => {
+  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`;
+
+  return fetch(url)
+    .then(response => response.json())
+    .then(
+      json => json.items.filter(item => item.snippet.thumbnails) // entferne alle items ohne thumbnail
+    );
+};
+
+const main = () => {
+  initializeYoutube();
+
+  getPlaylists(channelId).then(playlists => {
+    renderPlaylists(playlists);
+
+    const playlistId = playlists[0].id;
+    getPlaylistVideos(playlistId).then(renderVideoList);
+  });
+};
+
+main();

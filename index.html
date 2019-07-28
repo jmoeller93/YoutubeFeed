@@ -11,7 +11,7 @@
   <header class="ypt_channels">
     <!-- <button id="showPlayList">Show Play List</button>
     <button id="getAPIKey">Input API Key</button> -->
-    <div id="playListContainer" class="channelPlayer"></div>
+    <div id="playlistsContainer" class="channelPlayer"></div>
   </header>
 
   <body id="body">
@@ -40,19 +40,47 @@
 
     <div id="ypt_wrapper">
       <div class="video">
-        <div
-          id="player"
-          data-pl="PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv"
-          data-ch="UCQepnZmhCT9Boc2jbv7ehug"
-        ></div>
+        <div id="player"></div>
       </div>
-      <ul id="ypt_thumbs"></ul>
+      <!-- <div id="playlistContainer"></div> -->
+      <ul id="playlistContainer" class="ypt_thumbs"></ul>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"
+      integrity="sha256-eWzD4VoILNfodzTHdCIMKX/k47LcM3hmpTfFhAR7Cj0="
+      crossorigin="anonymous"
+    ></script>
+
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
     ></script>
+
+    <script type="text/javascript" src="./script.js"></script>
+    <script id="playlists" type="x-tmpl-mustache">
+      <ul>
+        {{#playlists}}
+          <li class="youtube-playlist" data-youtube-playlist-id="{{id}}">
+            <span>
+              <img alt="{{snippet.title}}" src="{{snippet.thumbnails.medium.url}}" style="width: 200px; height: 11">
+            </span>
+            <h3>{{snippet.title}}</h3>
+          </li>
+        {{/playlists}}
+      </ul>
+    </script>
+
+    <script id="playlist" type="x-tmpl-mustache">
+      {{#videos}}
+        <li class="youtube-video"
+            data-youtube-video-index="{{snippet.position}}">
+          <p>{{snippet.title}}</p>
+          <span>
+            <img alt="{{snippet.title}}" src="{{snippet.thumbnails.medium.url}}" style="width: 200px; height: 11">
+          </span>
+        </li>
+      {{/videos}}
+    </script>
   </body>
 </html>
