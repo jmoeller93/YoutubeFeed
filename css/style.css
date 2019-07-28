@@ -2,7 +2,7 @@ html {
   background: #fff;
   height: 100%;
   padding-top: 30px;
-  background-image: url("/images/sapShell_BackgroundImage.png");
+  background-image: url('/images/sapShell_BackgroundImage.png');
 }
 
 body {
@@ -47,7 +47,7 @@ h3 {
   margin-bottom: 1em;
 }
 
-#ypt_thumbs {
+.ypt_thumbs {
   overflow-y: scroll;
   overflow-x: hidden;
   width: 20%;
@@ -57,18 +57,18 @@ h3 {
   height: 0;
 }
 
-#ypt_thumbs li {
+.ypt_thumbs li {
   list-style: none;
   margin: 0;
   position: relative;
   font-size: 0;
 }
 
-#ypt_thumbs li img {
+.ypt_thumbs li img {
   width: 100%;
 }
 
-#ypt_thumbs li p {
+.ypt_thumbs li p {
   font-family: arial;
   font-size: 10px;
   background: rgba(0, 0, 0, 0.7);
@@ -81,17 +81,17 @@ h3 {
   margin: 0;
 }
 
-#ypt_thumbs li:hover p {
+.ypt_thumbs li:hover p {
   display: block;
   cursor: pointer;
 }
 
-#ypt_thumbs .ypt-now-playing p {
+.ypt_thumbs .ypt-now-playing p {
   display: block;
 }
 
-#ypt_thumbs .ypt-now-playing > span::after {
-  content: "\25b6  Now playing"; /* A traingle pointing right */
+.ypt_thumbs .ypt-now-playing > span::after {
+  content: '\25b6  Now playing'; /* A traingle pointing right */
   margin-top: -1em;
   display: block;
   width: 100%;
@@ -122,7 +122,7 @@ h3 {
 }
 
 @media only screen and (max-width: 400px) {
-  #ypt_thumbs {
+  .ypt_thumbs {
     display: none;
   }
   #ypt_wrapper .video {
@@ -164,7 +164,7 @@ h3 {
   color: #f1f1f1;
 }
 .btn::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 120%;
   height: 120%;

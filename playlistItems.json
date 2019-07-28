@@ -1,0 +1,446 @@
+{
+ "kind": "youtube#playlistItemListResponse",
+ "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/58_4i1aOX-cAt5oZYLJ7VMIRfI0\"",
+ "pageInfo": {
+  "totalResults": 11,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/zWVxsI9m2VgKJGnu3NBrFNjSJ1s\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di41NkI0NEY2RDEwNTU3Q0M2",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:14:49.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Login",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/1Ip-D6Ch-YU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 0,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "1Ip-D6Ch-YU"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/5lpoIcgjsZpIdSpNA6_j4vx36GI\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di4yODlGNEE0NkRGMEEzMEQy",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:15:21.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Private video",
+    "description": "This video is private.",
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 1,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "V0JG-CN1OeQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/iFrt42RfdByqH9FjduUaqFVGPvs\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di4wMTcyMDhGQUE4NTIzM0Y5",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:20:06.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Verkaufskontrakte",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/l-9GFnC0wgI/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/l-9GFnC0wgI/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/l-9GFnC0wgI/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/l-9GFnC0wgI/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/l-9GFnC0wgI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 2,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "l-9GFnC0wgI"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/F05Thr3m-6we9RjaezSrmyJkx9g\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di41MjE1MkI0OTQ2QzJGNzNG",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:22:34.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Alle Anlieferungen",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/jKgG8LhkOyc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/jKgG8LhkOyc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/jKgG8LhkOyc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/jKgG8LhkOyc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/jKgG8LhkOyc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 3,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "jKgG8LhkOyc"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/YxsqZCqO1czlQ3JW3mOEfB7ooUU\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di4wOTA3OTZBNzVEMTUzOTMy",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:25:06.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Einlagerungen",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/FNiStv5WmtY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/FNiStv5WmtY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/FNiStv5WmtY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/FNiStv5WmtY/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/FNiStv5WmtY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 4,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "FNiStv5WmtY"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/lfI2EMaYoyl5As6ELausflEUhnM\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di4xMkVGQjNCMUM1N0RFNEUx",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:26:56.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Private video",
+    "description": "This video is private.",
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 5,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "ZGlceFBar5U"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/a7WL9BVaC_vwHXPc1_yPShe0VUc\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di41MzJCQjBCNDIyRkJDN0VD",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:29:43.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Service und Support",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/X_xgQFJ-WQg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/X_xgQFJ-WQg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/X_xgQFJ-WQg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/X_xgQFJ-WQg/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/X_xgQFJ-WQg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 6,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "X_xgQFJ-WQg"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/EQ1ivHSBqVfivWOsx8k6zfjsCS0\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di5DQUNERDQ2NkIzRUQxNTY1",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:31:45.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Rechnungen",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/rsKXrqjtiKQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/rsKXrqjtiKQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/rsKXrqjtiKQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/rsKXrqjtiKQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/rsKXrqjtiKQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 7,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "rsKXrqjtiKQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/wq-iFZ1xRHxdR204VKT5reOQoKo\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di45NDk1REZENzhEMzU5MDQz",
+   "snippet": {
+    "publishedAt": "2017-03-23T17:34:11.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Meine Daten",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/N4T4XyrDSSE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/N4T4XyrDSSE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/N4T4XyrDSSE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/N4T4XyrDSSE/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/N4T4XyrDSSE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 8,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "N4T4XyrDSSE"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/xOWLQYCRk3JFeCmn6JdHtZ-MVD0\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di40NzZCMERDMjVEN0RFRThB",
+   "snippet": {
+    "publishedAt": "2017-08-08T07:00:13.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Screencast (August 2017)",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/WK1dpFcXGRQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/WK1dpFcXGRQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/WK1dpFcXGRQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/WK1dpFcXGRQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/WK1dpFcXGRQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 9,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "WK1dpFcXGRQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"Bdx4f4ps3xCOOo1WZ91nTLkRZ_c/wpnDzU_d6UKdXPxGGaVnMj3VQxI\"",
+   "id": "UExRN3V1Vlk2TTlpZnhTWDlfdkFxSVBIQWhDWXFpNGR1di5EMEEwRUY5M0RDRTU3NDJC",
+   "snippet": {
+    "publishedAt": "2017-08-08T07:47:20.000Z",
+    "channelId": "UCQepnZmhCT9Boc2jbv7ehug",
+    "title": "Raiffeisen Serviceportal - Einkaufskontrakt + Mein Düngerbezug",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/fXKHRiqP77M/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/fXKHRiqP77M/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/fXKHRiqP77M/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/fXKHRiqP77M/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "RaiffeisenKassel",
+    "playlistId": "PLQ7uuVY6M9ifxSX9_vAqIPHAhCYqi4duv",
+    "position": 10,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "fXKHRiqP77M"
+    }
+   }
+  }
+ ]
+}
