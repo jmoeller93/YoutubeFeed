@@ -23,61 +23,61 @@ var ypt_index = 0; //Playlists begin at the first video by default
 
 // Test;
 
-// function getPlaylists(channelID, playLists) {
-//   var apiKey = "AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8";
-//   var theUrl =
-//     "https://www.googleapis.com/youtube/v3/playlists?part=snippet" +
-//     "&maxResults=" +
-//     50 + //Can be anything from 1-50
-//     "&channelId=" +
-//     localChannelId +
-//     "&key=" +
-//     apiKey;
-//   var xmlHttp = null;
-//   xmlHttp = new XMLHttpRequest();
-//   xmlHttp.open("GET", theUrl, true);
-//   xmlHttp.send(null);
-//   xmlHttp.onload = function(e) {
-//     //when the request comes back
-//     buildPlaylistJSON(xmlHttp.responseText, playLists, channelID); //send the data to buildJSON
-//   };
-// }
+function getPlaylists(channelID, playLists) {
+  var apiKey = "AIzaSyArQNfmJDkjxP_ZyZIocbyuDeyTanf4Rl8";
+  var theUrl =
+    "https://www.googleapis.com/youtube/v3/playlists?part=snippet" +
+    "&maxResults=" +
+    50 + //Can be anything from 1-50
+    "&channelId=" +
+    localChannelId +
+    "&key=" +
+    apiKey;
+  var xmlHttp = null;
+  xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", theUrl, true);
+  xmlHttp.send(null);
+  xmlHttp.onload = function(e) {
+    //when the request comes back
+    buildPlaylistJSON(xmlHttp.responseText, playLists, channelID); //send the data to buildJSON
+  };
+}
 
-// function buildPlaylistJSON(response, list, channelID) {
-//   //Takes the text response and adds it to any existing JSON data
-//   var results = JSON.parse(response); //Parse it
-//   if (!list) {
-//     list = [];
-//   } //If there is no list to add to, make one
-//   list.push.apply(list, results.items); //Add JSON data to the list
-//   //If there is not a next-page token
-//   buildPlaylistHTML(list); //Send the JSON data to buildHTML
-// }
+function buildPlaylistJSON(response, list, channelID) {
+  //Takes the text response and adds it to any existing JSON data
+  var results = JSON.parse(response); //Parse it
+  if (!list) {
+    list = [];
+  } //If there is no list to add to, make one
+  list.push.apply(list, results.items); //Add JSON data to the list
+  //If there is not a next-page token
+  buildPlaylistHTML(list); //Send the JSON data to buildHTML
+}
 
-// function buildPlaylistHTML(data) {
-//   //Turns JSON data into HTML elements
-//   var list_data = ""; //A string container
-//   for (i = 0; i < data.length; i++) {
-//     //Do this to each item in the JSON list
-//     var item = data[i].snippet; //Each Youtube playlist item snippet
-//     if (!item.thumbnails) {
-//       continue;
-//     } //private videos do no reveal thumbs, so skip them
-//     list_data +=
-//       '<li data-ypt-channel="' +
-//       i +
-//       '"><span><img alt="' +
-//       item.title +
-//       '" src="' +
-//       item.thumbnails.medium.url +
-//       '"' +
-//       'style="width: 200px; height: 11"/></span>' +
-//       "<h3>" +
-//       item.title +
-//       "</h3></li>"; //create an element and add it to the list
-//   }
-//   playListContainer.innerHTML = list_data; //After the for loop, insert that list of links into the html
-// }
+function buildPlaylistHTML(data) {
+  //Turns JSON data into HTML elements
+  var list_data = ""; //A string container
+  for (i = 0; i < data.length; i++) {
+    //Do this to each item in the JSON list
+    var item = data[i].snippet; //Each Youtube playlist item snippet
+    if (!item.thumbnails) {
+      continue;
+    } //private videos do no reveal thumbs, so skip them
+    list_data +=
+      '<li data-ypt-channel="' +
+      i +
+      '"><span><img alt="' +
+      item.title +
+      '" src="' +
+      item.thumbnails.medium.url +
+      '"' +
+      'style="width: 200px; height: 11"/></span>' +
+      "<h3>" +
+      item.title +
+      "</h3></li>"; //create an element and add it to the list
+  }
+  playListContainer.innerHTML = list_data; //After the for loop, insert that list of links into the html
+}
 
 //Test
 
@@ -156,7 +156,7 @@ function onPlayerReady(event) {
 }
 
 getPlaylistData(playlistID);
-// getPlaylists(getPlaylists);
+getPlaylists(getPlaylists);
 
 //Once the Youtube Iframe API is ready...
 window.onYouTubeIframeAPIReady = function() {
@@ -179,16 +179,18 @@ window.onYouTubeIframeAPIReady = function() {
 
   var ul = document.getElementById("playListContainer"); //Parent
 
-  // ul.addEventListener("click", function(e) {
-  //   var target = e.target; //Clicked element
-  //   while (target && target.parentNode !== ul) {
-  //     target = target.parentNode; //If the clicked element isn't a direct child
-  //     if (!target) {
-  //     } //If element doesn't exist
-  //   }
-  //   if (target.tagName === "LI") {
-  //   }
-  // });
+  ul.addEventListener("click", function(e) {
+    var target = e.target; //Clicked element
+    while (target && target.parentNode !== ul) {
+      target = target.parentNode; //If the clicked element isn't a direct child
+      if (!target) {
+        console.log("hi");
+      } //If element doesn't exist
+    }
+    if (target.tagName === "LI") {
+      console.log("ho");
+    }
+  });
 
   // When the player does something...
   function onPlayerStateChange(event) {
@@ -231,7 +233,6 @@ window.onYouTubeIframeAPIReady = function() {
     function(e) {
       //click on a thumb that is not currently playing
       ypt_index = Number(jQuery(this).attr("data-ypt-index")); //Get the ypt_index of the clicked item
-      ypt_channel = Number(jQuery(this).attr("data-ypt-channel"));
       if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
         //if IOS
         player.cuePlaylist({
