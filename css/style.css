@@ -1,22 +1,46 @@
 html {
   background: #fff;
+  height: 100%;
   padding-top: 30px;
-}
-
-body {
-  width: 940px;
-  margin: 0 auto;
   background-image: url("/images/sapShell_BackgroundImage.png");
 }
 
-.page-header {
+body {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  top: 12%;
+}
+
+h3 {
+  height: 58px;
+}
+
+.channelPlayer {
+  width: 940px;
+}
+
+.channelPlayer li {
+  margin-right: 4px;
+  display: inline-block;
+  width: 210px;
+  margin-bottom: 24px;
+  height: 118px;
+}
+
+.data-ypt-channel {
+  display: inline;
+  list-style-type: none;
+}
+
+.ypt_channels {
   width: 100%;
   max-width: 100%;
 }
 
 #ypt_wrapper {
   width: 100%;
-  background: #fff;
   overflow: hidden;
   max-width: 100%;
   box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.5);
@@ -81,10 +105,11 @@ body {
 
 #ypt_wrapper .video {
   position: relative;
-  width: 80%;
+  width: 79.5%;
   /*height: 0;*/
   padding-bottom: 48.4%;
   float: left;
+  margin-right: 0.5%;
 }
 
 #ypt_wrapper .video iframe {
